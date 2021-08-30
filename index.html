@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Booltrain</title>
+</head>
+<body>
+  <h1>Calcola il prezzo del biglietto</h1>
+  <div class="form-ticket">
+    <label for="user-name">Nome Cognome</label>
+    <input type="text" id="user-name" placeholder="Inserisci il tuo nome">
+    <label for="distance">Km da percorrere</label>
+    <input type="number" id="distance" placeholder="Inserisci i km" min="0">
+    <label for="age">Fascia d'età</label>
+    <select id="age">
+      <option value="" disabled selected>Seleziona la tua fascia d'età</option>
+      <option value="underage">MINORENNE</option>
+      <option value="adult">MAGGIORENNE</option>
+      <option value="over">OVER 65</option>
+    </select>
+    <button id="generate">Genera</button>
+    <button id="cancel">Annulla</button>
+
+  </div>
+  
+<script src="js/script.js"></script>
+</body>
+</html>

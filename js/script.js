@@ -7,7 +7,7 @@ var discountU18 = 0.20;
 var discountOver65 = 0.40;
 
 var btnGenerate = document.getElementById('generate');
-
+var btnCancel = document.getElementById('cancel');
 
 //al click di genera
 btnGenerate.addEventListener('click',
@@ -28,10 +28,22 @@ btnGenerate.addEventListener('click',
     }
     price = (price - discount).toFixed(2);
     
-    // display
-    console.log(price);
-
+    //stampo i dati del biglietto
+    document.getElementById('ticket-details').classList.add('visible')
+    document.getElementById('guest-name').innerHTML = userName;
+    document.getElementById('discount').innerHTML = age;
+    document.getElementById('price').innerHTML = price
   }
 );
 
-//stampo i dati del biglietto
+//al click di annulla
+btnCancel.addEventListener('click',
+  function () {
+    //resetto i campi input
+    document.getElementById('user-name').value = '';
+    document.getElementById('distance').value = '';
+    document.getElementById('age').value = '';
+    //nascondo il biglietto
+    document.getElementById('ticket-details').classList.remove('visible')
+  }
+)

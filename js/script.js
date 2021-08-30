@@ -27,11 +27,17 @@ btnGenerate.addEventListener('click',
       discount = price * discountOver65;
     }
     price = (price - discount).toFixed(2);
+
+    //genero i dati della carrozza e codice cp
+    var car = Math.ceil(Math.random() * 9)
+    var cp = Math.floor(Math.random() * (99999 - 90000) + 90000);
     
     //stampo i dati del biglietto
     document.getElementById('ticket-details').classList.add('visible')
-    document.getElementById('guest-name').innerHTML = userName;
+    document.getElementById('passenger-name').innerHTML = userName;
     document.getElementById('discount').innerHTML = age;
+    document.getElementById('car').innerHTML = car
+    document.getElementById('cp').innerHTML = cp
     document.getElementById('price').innerHTML = price
   }
 );

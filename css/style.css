@@ -25,11 +25,13 @@ body{
 }
 
 
-h1{
+h1,
+h2{
   text-align: center;
   color: #fff;
   margin: 30px 0;
 }
+/* form */
 .form-ticket,
 .ticket-details{
   max-width: 1000px;
@@ -44,7 +46,6 @@ h1{
 }
 .ticket-details{
   display: none;
-  margin-top: 50px;
 }
 .ticket-details.visible{
   display: block;
@@ -66,6 +67,20 @@ h1{
   text-align: inherit;
   padding: 5px;
 }
-#generate{
+.btn#generate{
   margin-right: 30px;
 }
+/* ticket */
+.ticket-details{
+  padding: 10px;
+}
+.passenger-box{
+  width: 150px;
+  height: 100px;
+  background-color: #808080;
+}
+.ticket-table{
+  width: 100%;
+  height: 100px;
+}
+

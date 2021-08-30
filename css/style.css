@@ -61,7 +61,9 @@ h2{
   color: #b91450;
 }
 .form-inputs input,
-.form-inputs select{
+.form-inputs input:focus-visible,
+.form-inputs select,
+.form-inputs select:focus-visible{
   border: 1px solid #b91450;
   border-radius: 4px;
   text-align: inherit;
@@ -72,15 +74,30 @@ h2{
 }
 /* ticket */
 .ticket-details{
-  padding: 10px;
+  padding: 25px 20px 20px;
+  text-align: left;
+}
+.ticket-details-wrapper{
+  display: flex;
 }
 .passenger-box{
-  width: 150px;
+  width: 300px;
   height: 100px;
+  padding: 20px;
   background-color: #808080;
 }
+#passenger-name{
+  font-weight: bold;
+}
 .ticket-table{
+  table-layout: fixed;
   width: 100%;
   height: 100px;
+  border-top: 1px solid #454545;
+  border-bottom: 1px solid #454545;
+}
+.ticket-table th,
+.ticket-table td{
+  padding-left: 25px;
 }
 

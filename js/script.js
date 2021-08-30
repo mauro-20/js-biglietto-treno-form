@@ -21,10 +21,15 @@ btnGenerate.addEventListener('click',
     var price = distance * fare;
 
     var discount = 0;
+    var offer = ''
     if (age == 'underage') {
       discount = price * discountU18;
+      offer = 'Sconto Giovani'
     } else if (age == 'over') {
       discount = price * discountOver65;
+      offer = 'Sconto Silver'
+    } else {
+      offer = 'Biglietto Standard'
     }
     price = (price - discount).toFixed(2);
 
@@ -35,7 +40,7 @@ btnGenerate.addEventListener('click',
     //stampo i dati del biglietto
     document.getElementById('ticket-details').classList.add('visible')
     document.getElementById('passenger-name').innerHTML = userName;
-    document.getElementById('discount').innerHTML = age;
+    document.getElementById('discount').innerHTML = offer;
     document.getElementById('car').innerHTML = car
     document.getElementById('cp').innerHTML = cp
     document.getElementById('price').innerHTML = price

@@ -7,15 +7,40 @@
 /* common */
 body{
   background-color: #b91450;
+  font-family: sans-serif;
+}
+/* buttons */
+.btn{
+  color: #b91450;
+  background-color: #ccc;
+  padding: 5px;
+  font-weight: bold;
+  border: 1px solid #9d9d9d;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:hover{
+  border: 1px solid #e99b56;
+  background-color: #aaaaaa;
 }
 
+
+h1{
+  text-align: center;
+  color: #fff;
+  margin: 30px 0;
+}
 .form-ticket,
 .ticket-details{
   max-width: 1000px;
   margin: auto;
   text-align: center;
-  padding: 50px;
+  padding: 20px 150px;
   background-color: #fff;
+}
+.form-ticket{
+  border-radius: 10px;
+  box-shadow: 1px 2px 8px 0px #454545;;
 }
 .ticket-details{
   display: none;
@@ -23,4 +48,24 @@ body{
 }
 .ticket-details.visible{
   display: block;
+}
+.form-inputs{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 20px;
+}
+.form-ticket label{
+  display: block;
+  margin-bottom: 10px;
+  color: #b91450;
+}
+.form-inputs input,
+.form-inputs select{
+  border: 1px solid #b91450;
+  border-radius: 4px;
+  text-align: inherit;
+  padding: 5px;
+}
+#generate{
+  margin-right: 30px;
 }

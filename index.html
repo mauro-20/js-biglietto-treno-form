@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Booltrain</title>
-</head>
-<body>
-  <h1>Calcola il prezzo del biglietto</h1>
-  <div class="form-ticket">
-    <label for="user-name">Nome Cognome</label>
-    <input type="text" id="user-name" placeholder="Inserisci il tuo nome">
-    <label for="distance">Km da percorrere</label>
-    <input type="number" id="distance" placeholder="Inserisci i km" min="0">
-    <label for="age">Fascia d'età</label>
-    <select id="age">
-      <option value="" disabled selected>Seleziona la tua fascia d'età</option>
-      <option value="underage">MINORENNE</option>
-      <option value="adult">MAGGIORENNE</option>
-      <option value="over">OVER 65</option>
-    </select>
-    <div class="buttons">
-      <button id="generate">Genera</button>
-      <button id="cancel">Annulla</button>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Booltrain</title>
+  </head>
+  <body>
+    <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
+    <!-- form -->
+    <div class="form-ticket">
+      <div class="form-inputs">
+
+        <div>
+          <label for="user-name">Nome Cognome</label>
+          <input type="text" id="user-name" placeholder="Inserisci il tuo nome">
+        </div>
+        <div>
+          <label for="distance">Km da percorrere</label>
+          <input type="number" id="distance" placeholder="Inserisci i km" min="0">
+        </div>
+        <div>
+          <label for="age">Fascia d'età</label>
+          <select id="age">
+            <option value="" disabled selected>Seleziona un'opzione</option>
+            <option value="underage">MINORENNE</option>
+            <option value="adult">MAGGIORENNE</option>
+            <option value="over">OVER 65</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-buttons">
+        <button id="generate" class="btn">Genera</button>
+        <button id="cancel" class="btn">Annulla</button>
+      </div>
     </div>
-  </div>
-  <div id="ticket-details" class="ticket-details">
-    <div id="guest-name"></div>
-    <div id="discount"></div>
-    <div id="price"></div>
-  </div>
-  
-<script src="js/script.js"></script>
-</body>
+    <!-- /form -->
+    <!-- ticket -->
+    <div id="ticket-details" class="ticket-details">
+      <div id="guest-name"></div>
+      <div id="discount"></div>
+      <div id="price"></div>
+    </div>
+    <!-- /ticket -->
+    
+  <script src="js/script.js"></script>
+  </body>
 </html>
